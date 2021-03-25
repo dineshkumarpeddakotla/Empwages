@@ -5,8 +5,8 @@ public static final int Present = 1;
 public static final int Full_Time = 1;
 public static final int Part_Time = 2;
 public static final int Wage_perhr=20;
+public static final int Max_Workingdays=20;
 public static void main(String[] args){
-
 System.out.println("Welcome to Employee");
  Empwage emp = new Empwage();
         emp.Emp_wage();
@@ -29,8 +29,8 @@ break;
 default:
 }
 int Daily_wage=Wage_perhr*emphrs;
-
-System.out.println("Daily Emp Wage =" +Daily_wage);
+int Month_wage=Daily_wage*Max_Workingdays;
+System.out.println("Daily Emp Wage =" +Month_wage);
 break;
 case 0:
 System.out.println("Employee is Absent");
