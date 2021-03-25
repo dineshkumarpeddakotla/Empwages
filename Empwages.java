@@ -14,20 +14,25 @@ System.out.println("Welcome to Employee");
 public static class Empwage {
 public void Emp_wage() {
 int empcheck = (int) (Math.random() * 2);
-int emphrs=0;
-if(empcheck==Present){
+switch(empcheck){
+case Present:
 System.out.println("Employee is Present");
 int checkfullpart = ((int) (Math.random() * 2));
-if(checkfullpart==Full_Time){
+int emphrs=0;
+switch(checkfullpart){
+case Full_Time:
 emphrs=8;
-}
-if(checkfullpart==Part_Time){
+break;
+case Part_Time:
  emphrs=4;
+break;
+default:
 }
 int Daily_wage=Wage_perhr*emphrs;
 
 System.out.println("Daily Emp Wage =" +Daily_wage);
-}else{
+break;
+case 0:
 System.out.println("Employee is Absent");
 }
 }
