@@ -4,16 +4,15 @@ class Empwages{
 public static final int Present = 1;
 public static final int Full_Time = 1;
 public static final int Part_Time = 2;
-public static final int Wage_perhr=20;
-public static final int Max_Workingdays=20;
-public static final int Totalworkinghrs=100;
 
 
 public static void main(String[] args){
 System.out.println("Welcome to Employee");
-        computeEmpWages();
+        computeEmpWages("DMart",20,20,100);
+	 computeEmpWages("Reliance",15,23,110);
+
 }
-public static int computeEmpWages(){
+public static int computeEmpWages(String company,int Wage_perhr,int Max_Workingdays,int Totalworkinghrs){
 int workingdays=0;
 int workinghrs=0;
 int Total_Emp_hrs=0;
