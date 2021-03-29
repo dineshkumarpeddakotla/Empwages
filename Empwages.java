@@ -7,23 +7,21 @@ public static final int Part_Time = 2;
 public static final int Wage_perhr=20;
 public static final int Max_Workingdays=20;
 public static final int Totalworkinghrs=100;
+
+
 public static void main(String[] args){
 System.out.println("Welcome to Employee");
- Empwage emp = new Empwage();
-        emp.Emp_wage();
+        computeEmpWages();
 }
-public static class Empwage {
-
+public static int computeEmpWages(){
 int workingdays=0;
 int workinghrs=0;
 int Total_Emp_hrs=0;
-
-public void Emp_wage() {
+int Total_wage=0;
+int Emp_wage=0;
 int empcheck = (int) (Math.random() * 2);
 switch(empcheck){
 case Present:
- int Total_wage = 0;
- int Emp_wage;
 while (workingdays < Max_Workingdays&&Total_Emp_hrs<Totalworkinghrs) {
 int checkfullpart = ((int) (Math.random() * 2));
 int emphrs=0;
@@ -46,7 +44,8 @@ break;
 case 0:
 System.out.println("Employee is Absent");
 }
+return Total_wage;
 }
 }
-}
+
 
