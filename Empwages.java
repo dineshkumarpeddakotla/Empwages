@@ -4,19 +4,39 @@ class Empwages{
 public static final int Present = 1;
 public static final int Full_Time = 1;
 public static final int Part_Time = 2;
+private  final String company;
+private  final int Wage_perhr;
+private  final int Max_Workingdays;
+private  final int Totalworkinghrs;
+private  int Total_wage;
 
+public Empwages(String company,int Wage_perhr,int Max_Workingdays,int Totalworkinghrs){
+this.company=company;
+this.Wage_perhr=Wage_perhr;
+this.Max_Workingdays=Max_Workingdays;
+this.Totalworkinghrs=Totalworkinghrs;
+}
+public String toString(){
+return ("Total Emp Wage for Company : "+company+" is : "+Total_wage);
+}
 
 public static void main(String[] args){
 System.out.println("Welcome to Employee");
-        computeEmpWages("DMart",20,20,100);
-	 computeEmpWages("Reliance",15,23,110);
+Empwages dMart = new Empwages("DMart",20,20,100);
+Empwages reliance= new Empwages("Reliance",15,23,110);
+System.out.println("DMart");
+        dMart.computeEmpWages();
+System.out.println("reliance");
+
+	 reliance.computeEmpWages();
 
 }
-public static int computeEmpWages(String company,int Wage_perhr,int Max_Workingdays,int Totalworkinghrs){
+
+public void computeEmpWages(){
 int workingdays=0;
 int workinghrs=0;
 int Total_Emp_hrs=0;
-int Total_wage=0;
+Total_wage=0;
 int Emp_wage=0;
 int empcheck = (int) (Math.random() * 2);
 switch(empcheck){
@@ -43,7 +63,6 @@ break;
 case 0:
 System.out.println("Employee is Absent");
 }
-return Total_wage;
 }
 }
 
